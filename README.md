@@ -20,4 +20,6 @@ docker run -d \
     iaingalloway/valheim-announce
 ```
 
+If you're running the Valheim server in a container, and running valheim-announce on the same host, you'll need to connect the two containers to the same `--network` so that status.json is accessible.
+
 I used https://github.com/lloesche/valheim-server-docker for the server.
