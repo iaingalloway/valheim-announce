@@ -1,7 +1,9 @@
 FROM debian:stable-slim
 
 RUN apt-get update \
-  && apt-get -y install cron curl jq
+  && apt-get -y install cron curl jq \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 COPY ./scripts /valheim-announce
 RUN find /valheim-announce -type f -exec chmod 0744 {} \;
