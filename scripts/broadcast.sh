@@ -1,5 +1,7 @@
 #!/bin/bash
  
+source /valheim-announce/environment
+
 message=$(cat)
 
 if [ -z "$message" ]; then

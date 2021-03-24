@@ -1,9 +1,10 @@
 #!/bin/bash
 
+source /valheim-announce/environment
+
 next=$(cat)
 
-if [ ! -f /valheim-announce/player_count_cache ]; then echo 0 > /valheim-announce/player_count_cache; fi
-prev=$(< /valheim-announce/player_count_cache)
+prev=$(< /valheim-announce/player-count-cache)
 
 if [ "$prev" -eq "$next" ]; then
     exit 0
@@ -13,4 +14,4 @@ elif [ "$prev" -lt "$next" ]; then
     echo "A player just joined the server. Current players: $next."
 fi
 
-echo "$next" > /valheim-announce/player_count_cache
+echo "$next" > /valheim-announce/player-count-cache

@@ -1,2 +1,0 @@
-* * * * * root bash /valheim-announce/get-player-count.sh | bash /valheim-announce/compare-with-previous.sh | bash /valheim-announce/broadcast.sh
-# Empty line
